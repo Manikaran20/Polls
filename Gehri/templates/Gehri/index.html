@@ -1,0 +1,10 @@
+{% if latest_question_list %}
+<h1>content content??</h1>
+    <ul>
+    {% for lauda in latest_question_list %}
+        <li><a href="{% url 'Gehri:results' lauda.id %}">{{ lauda.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Gehris are available.</p>
+{% endif %}
